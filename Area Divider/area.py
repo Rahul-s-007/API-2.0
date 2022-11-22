@@ -19,7 +19,7 @@ def checkArea(pt):
 
     area = wid * hei
 
-    if(area <= 0.005):
+    if(area <= 0.005): #try 0.05 and you can observe that number of sub boxes reduces
         return pt
     else:
         return split4(pt)
