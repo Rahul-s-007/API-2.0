@@ -76,8 +76,21 @@ count = count[::-1]
 mylabels = mylabels[::-1]
 myexplode = myexplode[::-1]
 #"""
-plt.rcParams.update({'font.size': 18}) #Change font size of every text in plot
-plt.pie(count[0:disp_cnt+1], labels = mylabels[0:disp_cnt+1], explode=myexplode[0:disp_cnt+1], startangle = 0, autopct="%0.2f%%", shadow = True)
+
+new_count = count[0:disp_cnt+1]
+new_lables = mylabels[0:disp_cnt+1]
+new_explode = myexplode[0:disp_cnt+1]
+
+s1 = sum(new_count)
+s2 = sum(count)
+new_count.append(s2-s1)
+new_lables.append("Other Crimes")
+new_explode.append(0)
+
+plt.rcParams.update({'font.size': 15}) #Change font size of every text in plot
+plt.pie(new_count, labels = new_lables, explode = new_explode, startangle = 0, autopct="%0.2f%%", shadow = True)
+
+#plt.pie(count[0:disp_cnt+1], labels = mylabels[0:disp_cnt+1], explode=myexplode[0:disp_cnt+1], startangle = 0, autopct="%0.2f%%", shadow = True)
 
 #print(mylabels[0:disp_cnt+1])
 #plt.pie(count, labels = mylabels) #No displacement
