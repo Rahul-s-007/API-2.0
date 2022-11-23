@@ -10,3 +10,5 @@
 ### Alan Mohan - Back End [PHP]
 ### Vansh Gupta - Front End [HTML and CSS]
 ### Suryakrishnan Narayan - Front End / Hosting [HTML and CSS]
+## Link to our Medium Article:
+### <insert link here>
