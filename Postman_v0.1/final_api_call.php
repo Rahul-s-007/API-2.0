@@ -57,7 +57,8 @@ fwrite($json_file2,']');
 fclose($json_file2);
 
 //redirect to display page after crime incidents are generated
-// header()
+$base_url="http://localhost:8080/Postman_v0.1/";
+header('Location:'.$base_url.'test/heatMap.html');
 function half_points($coordinates)//takes a bounding box and divides it into 4 smaller boxes
 {
     sort($coordinates,1);
