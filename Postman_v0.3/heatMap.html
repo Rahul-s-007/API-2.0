@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Map</title>
+    <link rel="stylesheet" href="heatMp.css">           
+</head>
+<body>
+   <!-- NAVBAR START -->
+   <div class="logo img">
+    <a href="index.html" class="logo row">
+        <img src="./logo/logo.png" class="concLogo" alt="" srcset="">
+    </a>
+</div>
+<header class="row cont">
+    <div class="toggleMenu" onclick="toggleMenu();"></div>
+    <nav class="navigation row">
+        <ul class="row">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT US</a></li>
+            <li><a href="./contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- NAVBAR END -->
+<!-- MAP AREA START -->
+<div class="store">
+    <div class="sidebar">
+        <h2 id="cityName"></h2>
+        <ul class="list" id="list">
+            <li>Violent crime: <span id="Violent crime"></span></li>
+            <li>Public order: <span id="Public order"></span></li>
+            <li>Anti-social behaviour: <span id="Anti-social behaviour"></span></li>
+            <li>Criminal damage arson: <span id="Criminal damage arson"></span></li>
+            <li>Theft: <span id="other-theft"></span></li>
+            <li>Vehicle crime: <span id="Vehicle crime"></span></li>
+            <li>Shoplifting: <span id="Shoplifting"></span></li>
+            <li>Robbery: <span id="Robbery"></span></li>
+            <li>Drugs: <span id="Drugs"></span></li>
+            <li>Other crime: <span id="other-crime"></span></li>
+        </ul>
+    </div>
+    <div class="main" id="map"></div>
+</div>
+<!-- MAP AREA END -->
+    
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARhyhVOSm4X980_Ox9EUq_EBmIxPq2leM&v=3.31&libraries=places&callback=initAutocompleteexp&libraries=visualization"></script>
+    <script type="module" src="heatMap.js"></script>
+    <script src="heatMap1.js"></script>
+
+</body>
+</html>

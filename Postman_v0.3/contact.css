@@ -1,0 +1,357 @@
+@font-face { font-family: gro Ov Ed Font; src: url('./fonts/Grooved.ttf'); } 
+
+#loading{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff url('./img/gif1.gif')no-repeat center center;
+  z-index: 99999;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  background: #5D6675;
+  clip-path: inset(47% 0 0 0);
+  z-index: -1;
+  height: 100%;
+}
+::selection{
+  background:	#5D6675;
+  color: #fff;
+}
+
+/* NAVIGATION START */
+
+img
+{
+ max-width: 100%;   
+ object-fit: cover;
+}
+a
+{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+ul
+{
+    position: absolute;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1,p
+{
+    margin: 0;
+}
+.row
+{
+    display: flex;
+}
+.container
+{
+    max-width: 90%;
+    margin: 0 auto;
+}
+header
+{
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 1.5em 0;
+}
+.logo
+{
+    align-items: center;
+}
+.logo img
+{
+    align-items: center;
+    position: fixed;
+    top: 1px;
+    padding-top: 10px;
+    left: 20px;
+    max-width: 180px;
+}
+nav ul
+{
+    gap: 2em;
+    align-items: center;
+}
+nav a
+{
+    font-family: gro Ov Ed Font;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition:0.3s ease-in-out ;
+}
+nav a::after
+{
+    display: block;
+    content: "";
+    width: 0;
+    height: 5px;
+    margin: 0 auto;
+    background-color: #F7D059;
+    border-radius: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition:0.3s ease-in-out ;
+}
+nav li:nth-of-type(3) a::after
+{
+    all: unset;
+}
+nav a:hover::after
+{
+    width: 30px;
+}
+nav li:nth-of-type(3) a
+{
+    padding: 0.5em 1em;
+    background-color: #A9C3D2;
+    color: #151E1D;
+    font-weight: bold;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms--transition: 0.3s ease-in-out;
+    -o-transition:0.3s ease-in-out ;
+}
+nav li:nth-of-type(3) a:hover, .hero a:hover
+{
+    box-shadow: 4px 4px 4px rgba(255, 255, 255, .25);
+}
+/* NAVIGATION END */
+
+/* RESPONSIVE NAVIGATION START */
+@media screen and (max-width:960px)
+{
+    .toggleMenu
+    {
+        position: absolute;
+        right: 5%;
+        top: 15px;
+        background-image: url(./img/Hamburger_icon.svg.png);
+        color: #ebebeb;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        padding: 2em;
+        z-index: 1000;
+        transition: background-size 0.3s ease-in-out;
+        -webkit-transition: background-size 0.3s ease-in-out;
+        -moz-transition:background-size  0.3s ease-in-out;
+        -ms-transition:background-size  0.3s ease-in-out;
+        -o-transition: background-size 0.3s ease-in-out ;
+    }
+    .toggleMenu.active
+    {
+        position: fixed;
+        background-image: url(./img/close.png);
+        background-size: 25px;
+    }
+    .navigation
+    {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-height: 0;
+        opacity: 0;
+        transform-origin: top;
+        transform: scale(1,0);
+        -webkit-transform: scale(1,0);
+        -moz-transform: scale(1,0);
+        -ms-transform: scale(1,0);
+        -o-transform: scale(1,0);
+    }
+    .navigation.active
+    {
+        position: fixed;
+        inset: 0;
+        margin: auto;
+        max-height: 100%;
+        z-index: 99;
+        opacity: 1;
+        background-color: #151E1D;
+        color: #ebebeb;
+        transform: scale(1,1);
+        -webkit-transform: scale(1,1);
+        -moz-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+        -o-transform: scale(1,1);
+
+        transition: 0.8s ease-in-out;
+        -webkit-transition: 0.8s ease-in-out;
+        -moz-transition: 0.8s ease-in-out;
+        -ms-transition: 0.8s ease-in-out;
+        -o-transition:0.8s ease-in-out ;
+    }
+    nav ul a
+    {
+      color: #FFF;
+    }
+    nav ul
+    {  
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+}
+/* RESPONSIVE NAVIGATION END */
+
+/* CARD START */
+.container{
+  max-width: 950px;
+  width: 100%;
+  overflow: hidden;
+  padding: 80px 0;
+}
+h1{
+  position: relative;
+  display: inline-block;
+  left: calc(50% - 100px);
+  font-size: 50px;
+  bottom: 30px;
+  font-weight: 400;
+  color: #f3c436;
+  font-family: gro Ov Ed Font;
+}
+.container .main-card{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  transition: 1s;
+}
+#two:checked ~ .main-card{
+  margin-left: -100%;
+}
+.container .main-card .cards{
+  width: calc(100%);
+  display: flex;
+  flex-wrap: unset;
+  margin: 0 20px;
+  justify-content: space-between;
+}
+.main-card .cards .card{
+  width: calc(100% / 4 - 10px);
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+}
+.main-card .cards .card:hover{
+  transform: translateY(-15px);
+}
+.cards .card .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cards .card .content .img{
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #5D6675;
+  margin-bottom: 14px;
+}
+.card .content .img img{
+  height: 100%;
+  width: 100%;
+  border: 3px solid #ffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card .content .name{
+  font-size: 20px;
+  font-weight: 500;
+}
+.card .content .job{
+  font-size: 20px;
+  color: #151E1D;
+}
+.card .content .media-icons{
+  margin-top: 10px;
+  display: flex;
+
+}
+.media-icons a{
+  text-align: center;
+  line-height: 33px;
+  height: 35px;
+  width: 35px;
+  margin: 0 4px;
+  font-size: 14px;
+  color: #FFF;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: #151E1D;
+  transition: all 0.3s ease;
+}
+.media-icons a:hover{
+  color: #f3c436;
+  background-color: #fff;
+  border-color: #151E1D;
+}
+/* CARD START */
+
+/* RESPONSIVE CARD START */
+@media (max-width: 768px) {
+  .main-card .cards .card{
+    margin: 20px 0 10px 0;
+    width: calc(100% / 4 - 10px);
+  }
+}
+@media (max-width: 600px) {
+  .main-card .cards .card{
+    margin: 20px 5px 10px 5px;
+    font-size: 6px;
+    width: calc(100% / 4 - 10px);
+  }
+  .cards .card .content .img{
+    height: 70px;
+    width: 70px;
+  }
+  .card .content .name{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .card .content .job{
+    font-size: 14px;
+    color: #151E1D;
+  }
+}
+/* RESPONSIVE CARD END */
