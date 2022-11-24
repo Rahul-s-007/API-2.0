@@ -11,4 +11,4 @@
 ### Vansh Gupta - UI and UX, Web design and Web development [HTML and CSS]
 ### Suryakrishnan Narayan - Front End [HTML, CSS and JS]
 ## Link to our Medium Article:
-### <insert link here>
+### You can find all about how we did it in this [article](https://medium.com/@f20200237/crimelog-logging-crimes-since-2022-18ee590ca9a6)  :)
