@@ -7,8 +7,8 @@
 ### **(It is currently only available in the United Kingdom) 
 ## Team members:
 ### Rahul Sumbly - Scripts for Data Reading, Processing and Visualization [Python and File Handling] (Team Lead)
-### Alan Mohan - Back End [PHP]
+### Alan Mohan - Back End and Hosting [PHP]
 ### Vansh Gupta - UI and UX, Web design and Web development [HTML and CSS]
-### Suryakrishnan Narayan - Front End / Hosting [HTML and CSS]
+### Suryakrishnan Narayan - Front End [HTML, CSS and JS]
 ## Link to our Medium Article:
 ### <insert link here>
