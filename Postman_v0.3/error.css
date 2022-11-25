@@ -1,4 +1,4 @@
-@font-face { font-family: gro Ov Ed Font; src: url('/fonts/Grooved.ttf'); } 
+@font-face { font-family: gro Ov Ed Font; src: url('./fonts/Grooved.ttf'); } 
 *,*::after,*::before
 {
     box-sizing: border-box;
@@ -48,7 +48,7 @@ h1,p
 .container
 {
     max-width: 90%;
-    margin: 0 auto;
+    margin: 0;
 }
 header
 {
@@ -134,7 +134,57 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
 {
     box-shadow: 4px 4px 4px rgba(255, 255, 255, .25);
 }
+.hero
+{
+    gap: 2em;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    min-height: calc(100vh - 93.6px);
+}
+.hero>*
+{
+    flex: 1 1 25em;
+}
+.hero h1
+{
+    font-weight: 700;
+    font-size: clamp(40px,5vw,70px);
+    line-height: .7;
+    font-family: gro Ov Ed Font;
+}
 /* NAVBAR END */
+.error
+{
+    width: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 200px;
+    font-family: 'gro Ov Ed Font';
+    font-weight: 500;
+    font-size: 34px;
+}
+.button
+{
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    margin:  0 auto;
+    width: 500px;
+    height: 50px;
+    background-color: #5D6675;
+    cursor: pointer;
+    font-size: large;
+}
+.button:hover
+{
+    background-color: #151E1D;
+    border: 3px solid #A9C3D2;
+    transition: .3s ease-in-out;
+	color:#fff;
+}
 
 /* Responsiveness  NAVIGATION START */
 @media screen and (max-width:960px)
@@ -142,9 +192,8 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
     .toggleMenu
     {
         position: absolute;
-        top: 15px;
         right: 5%;
-        background-image: url(img/Hamburger_icon_white.png);
+        background-image: url(./img/Hamburger_icon.svg.png);
         color: #ebebeb;
         background-position: center;
         background-repeat: no-repeat;
@@ -152,6 +201,7 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
         width: 30px;
         height: 30px;
         padding: 2em;
+        top: 25px;
         z-index: 1000;
         transition: background-size 0.3s ease-in-out;
         -webkit-transition: background-size 0.3s ease-in-out;
@@ -162,7 +212,7 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
     .toggleMenu.active
     {
         position: fixed;
-        background-image: url(/img/close.png);
+        background-image: url(./img/close.png);
         background-size: 25px;
     }
     .navigation
@@ -183,6 +233,7 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
     {
         position: fixed;
         inset: 0;
+        z-index: 99;
         margin: auto;
         max-height: 100%;
         opacity: 1;
@@ -193,30 +244,44 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
         -moz-transform: scale(1,1);
         -ms-transform: scale(1,1);
         -o-transform: scale(1,1);
-
         transition: 0.8s ease-in-out;
         -webkit-transition: 0.8s ease-in-out;
         -moz-transition: 0.8s ease-in-out;
         -ms-transition: 0.8s ease-in-out;
-        -o-transition:0.8s ease-in-out ;
-    }
-    nav ul a
-    {
-      color: #FFF;
+        -o-transition: 0.8s ease-in-out;
     }
     nav ul
     {
-        flex-direction: column;
         position: absolute;
         left: 0;
         right: 0;
         margin: 0 auto;
+        flex-direction: column;
     }
+    .hero p
+    {
+        font-size: 22px;
+    }
+    body{
+    background: #5D6675;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    }
+    .error
+{
+    font-size: 24px;
+    width: 200px;
+    margin: 0 auto;
+}
+.button{
+    position: absolute;
+    top: 350px;
+    width: 200px;
+    border: 2px solid #151E1D;
+}
+  
 }
 /* Responsiveness NAVIGATION  END */
-.error
-{
-    width:500px;
-    margin: 0 auto;
-    text-align: center;
-}
