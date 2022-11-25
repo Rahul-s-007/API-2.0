@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body onload="myfunction()">
+    <div id="loading"></div>
+    <!-- Navigation -->
+    <div class="logo img">
+        <a href="index.html" class="logo row">
+            <img src="logo/logo.png" alt="" srcset="">
+        </a>
+    </div>
+    <header class="row container">
+        <div class="toggleMenu" onclick="toggleMenu();"></div>
+        <nav class="navigation row">
+            <ul class="row">
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/about.html">ABOUT US</a></li>
+                <li><a href="/contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Navigatoin END -->
+
+    <!-- HERO SECTION -->
+    <section class="hero row container">
+        <div>
+            <h1>Find the <span class="red">CRIME</span> now</h1>
+            <p>CrimeLog helps to find the crime spots. </p>
+            <div class="input-box">
+                <form action="/city" method="post" autocomplete="off">
+                    <div class="autocomplete-wrapper" id="autocomplete-wrapper">
+                        <input type="text" placeholder="Enter a City" id="autocomplete-input">
+                    </div>
+                <button class="button" type="submit" id="cityName"><ion-icon name="search-outline"></button>
+                <div class="underline"></div>
+                </form>
+              </div>
+        </div>
+        <div class="row"></div>
+    </section>
+    <!-- HERO END -->
+    <script src="main.js"></script>
+    <script type="module" src="drop.js"></script>
+</body>
+</html>
