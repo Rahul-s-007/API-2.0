@@ -1,10 +1,19 @@
 <?php
 $location=$_POST['location'];
 $location=trim(strtolower($location));
+ob_start();
+session_start();
+$_SESSION['city_name']=$location;
 if(strcmp($location,'london')==0)
 {
+    $city_file = fopen('./city_name.json','w') or die('unable to write into file'); //write all incidents from each api call in one file
+    $write_city=array('city_name' => $location);
+    fwrite($city_file,json_encode($write_city));
+    fclose($city_file);
     lon_redir();
+    header('Location:'.base_url().'/crime_analyse.php');
 }
+else{
 //write city name to json file
 $city_file = fopen('./city_name.json','w') or die('unable to write into file'); //write all incidents from each api call in one file
     $write_city=array('city_name' => $location);
@@ -34,8 +43,7 @@ curl_close($curl);
 $map_response_decode=json_decode($map_response,true);//deocde json response into associative array
 if(sizeof($map_response_decode)==0)
 {
-  echo 'Error in osm api call';
-  die;
+  header('Location:'.base_url().'/error.html');
 }
 
 $data=$map_response_decode[0]['boundingbox'];//store bounding box of first location returned by osm api
@@ -67,8 +75,8 @@ fclose($json_file2);
 
 //redirect to crime analyse page after incidents are generated
 
-header('Location:'.base_url().'/Postman_v0.3/crime_analyse.php');
-
+header('Location:'.base_url().'/crime_analyse.php');
+}
 function half_points($coordinates)//takes a bounding box and divides it into 4 smaller boxes
 {
     sort($coordinates,1);
@@ -178,12 +186,12 @@ function api_call(&$box)
 function lon_redir()
 {
     $file='./lon.json';
-    // $json = file_get_contents($file);
-    // $json_file = fopen('./crime_incidents.json','w') or die('unable to write into file');
-    // fwrite($json_file,$json);
-    // fclose($json_file);
-    copy($file,(base_url().'/Postman_v0.3/crime_incidents.json'));
-    header('Location:'.base_url().'/Postman_v0.3/crime_analyse.php');
+    $json = file_get_contents($file);
+    $json_file = fopen('./crime_incidents.json','w') or die('unable to write into file');
+    fwrite($json_file,$json);
+    fclose($json_file);
+    // copy($file,(base_url().'/crime_incidents.json'));
+    header('Location:'.base_url().'/crime_analyse.php');
 
 }
 //returns base url of the server
