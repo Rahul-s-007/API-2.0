@@ -1,14 +1,14 @@
 # POSTMAN API HACKATHON - 2.0
 
-# ***Webiste Link:*** [CrimeLog](https://crimelog.000webhostapp.com/index.html)
+# ***Website Link:*** [CrimeLog](https://crimelog.000webhostapp.com/index.html)
 
 # ***About us:***
-### We help you see the types of crimes commited in your area in the past month, with the type and location of the crime that occoured so that you can stay Informed and can take Precautions accordingly.
+### We help you see the types of crimes committed in your area in the past month, with the type and location of the crime that occured so that you can stay Informed and can take Precautions accordingly.
 ## It is very easy to use,
 - Open the website
 - Enter the city for which you want to view the crime statistics
 - Press Search
-### Then you will be brought to a new page where you will see a *Heat Map* of the crimes and a list contaning information about the types of crime commited in your area.
+### Then you will be brought to a new page where you will see a *Heat Map* of the crimes and a list containing information about the types of crime committed in your area.
 ### Feel free to checkout our *About Us* and *Contact Us* Sections as well :)
 ### \*(The tool currently only supports locations in the United Kingdom)
 
