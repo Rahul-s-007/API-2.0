@@ -44,6 +44,7 @@ $map_response_decode=json_decode($map_response,true);//deocde json response into
 if(sizeof($map_response_decode)==0)
 {
   header('Location:'.base_url().'/error.html');
+  die;
 }
 
 $data=$map_response_decode[0]['boundingbox'];//store bounding box of first location returned by osm api
