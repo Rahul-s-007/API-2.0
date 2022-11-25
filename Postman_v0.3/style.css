@@ -17,7 +17,7 @@
 }
 body
 {
-    background: url(./img/background.svg);
+    background: url('./img/background.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -36,6 +36,9 @@ a
 }
 ul
 {
+    position: absolute;
+    top: 35px;
+    right: 20px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -200,6 +203,7 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
         width: 30px;
         height: 30px;
         padding: 2em;
+        top: 25px;
         z-index: 1000;
         transition: background-size 0.3s ease-in-out;
         -webkit-transition: background-size 0.3s ease-in-out;
@@ -251,6 +255,10 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
     }
     nav ul
     {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto ;
         flex-direction: column;
     }
     .hero h1
@@ -286,6 +294,7 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
   .input-box .button {
     position: absolute;
     top: 50%;
+    left: 250px;
     transform: translateY(-50%);
   }
   .input-box input {
@@ -295,8 +304,6 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
     font-size: 28px;
     font-weight: 400;
     border: none;
-    padding: 0 0px 0 0;
-    margin-left: 50px;
     background-color: transparent;
     color: #F7D059;
     border-bottom: 1px solid #fff;
@@ -344,8 +351,8 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
 {
     list-style: none;
     padding: unset;
-    padding-left:50px;
-    padding-right:21px;
+    padding-left: 20px;
+    padding-right: 51px;
     margin: unset;
     position: absolute;
     width: 100%;

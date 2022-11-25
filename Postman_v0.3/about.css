@@ -40,7 +40,8 @@ a
 ul
 {
     position: absolute;
-    right: 10px;
+    top: 35px;
+    right: 20px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -153,7 +154,7 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
         position: absolute;
         top: 15px;
         right: 5%;
-        background-image: url(img/Hamburger_icon_white.png);
+        background-image: url(./img/Hamburger_icon_white.png);
         color: #ebebeb;
         background-position: center;
         background-repeat: no-repeat;
@@ -171,7 +172,7 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
     .toggleMenu.active
     {
         position: fixed;
-        background-image: url(/img/close.png);
+        background-image: url(./img/close.png);
         background-size: 25px;
     }
     .navigation
