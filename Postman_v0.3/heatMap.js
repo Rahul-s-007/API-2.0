@@ -1,15 +1,24 @@
-import data from './crime_incidents.json' assert{type:'json'};
-import stats from './crime_report.json' assert{type:'json'};
-import name from './city_name.json' assert{type:'json'};
+// import data from './crime_incidents.json' assert{type:'json'};
+// import stats from './crime_report.json' assert{type:'json'};
+// import name from './city_name.json' assert{type:'json'};
+
+fetch("crime_report.json")
+.then(cr => cr.json())
+.then(crData => work1(crData));
+
+function work1(crData)
+{
+
+
 let latitude = [];
 let longitude = [];
 
-latitude = data.map((lat) =>
+latitude = crData.map((lat) =>
 {
     return lat.location.latitude;
 });
 
-longitude = data.map((long) =>
+longitude = crData.map((long) =>
 {
     return long.location.longitude;
 });
@@ -48,16 +57,17 @@ var nums = document.getElementById("list");
 var listItem = nums.getElementsByTagName("li");
 
 
-document.getElementById("Violent crime").innerHTML = stats['violent-crime'];
-document.getElementById("Public order").innerHTML = stats['public-order'];
-document.getElementById("Anti-social behaviour").innerHTML = stats['anti-social-behaviour'];
-document.getElementById("Criminal damage arson").innerHTML = stats['criminal-damage-arson'];
-document.getElementById("other-theft").innerHTML = stats['other-theft'];
-document.getElementById("Vehicle crime").innerHTML = stats['vehicle-crime'];
-document.getElementById("Shoplifting").innerHTML = stats['shoplifting'];
-document.getElementById("Robbery").innerHTML = stats['robbery'];
-document.getElementById("Drugs").innerHTML = stats['drugs'];
-document.getElementById("other-crime").innerHTML = stats['other-crime'];
+// document.getElementById("Violent crime").innerHTML = stats['violent-crime'];
+// document.getElementById("Public order").innerHTML = stats['public-order'];
+// document.getElementById("Anti-social behaviour").innerHTML = stats['anti-social-behaviour'];
+// document.getElementById("Criminal damage arson").innerHTML = stats['criminal-damage-arson'];
+// document.getElementById("other-theft").innerHTML = stats['other-theft'];
+// document.getElementById("Vehicle crime").innerHTML = stats['vehicle-crime'];
+// document.getElementById("Shoplifting").innerHTML = stats['shoplifting'];
+// document.getElementById("Robbery").innerHTML = stats['robbery'];
+// document.getElementById("Drugs").innerHTML = stats['drugs'];
+// document.getElementById("other-crime").innerHTML = stats['other-crime'];
 
-document.getElementById("cityName").innerHTML = name['city_name'];
+// document.getElementById("cityName").innerHTML = name['city_name'];
 
+}

@@ -1,11 +1,20 @@
-import users from './gb.json' assert{type:'json'};
+// import users from './gb.json' assert{type:'json'};
 // console.log(users)
+
+fetch("gb.json")
+.then(response => response.json())
+.then(data => work(data));
+
+function work(data)
+{
+    
+
 
 const inputE1 = document.querySelector("#autocomplete-input");
 inputE1.addEventListener("input",onInputChange);
 let cityName = [];
 
-cityName = users.map((name) =>
+cityName = data.map((name) =>
 {
     return name.city;
 });
@@ -62,4 +71,5 @@ function onCityButtonClick(event)
     const buttonE1 = event.target;
     inputE1.value = buttonE1.innerHTML;
     removeAutocompleteDropdown();
+}
 }
