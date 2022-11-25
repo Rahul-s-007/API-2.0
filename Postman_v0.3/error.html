@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error</title>
     <link rel="stylesheet" href="error.css">
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
 </head>
 <body>
     <div class="logo img">
         <a href="index.html" class="logo row">
-            <img src="./logo/logo.png" class="concLogo" alt="" srcset="">
+            <img src="./logo/logo.png" alt="" srcset="">
         </a>
     </div>
-    <!-- NAVBAR START -->
-    <header class="row cont">
+    <header class="row container">
         <div class="toggleMenu" onclick="toggleMenu();"></div>
         <nav class="navigation row">
             <ul class="row">
@@ -25,6 +25,11 @@
         </nav>
     </header>
     <!-- NAVBAR END -->
-    <h1 class="error">Ugh! Please enter a valid location in United Kingdom</h1>
+   
+    <div class="heading">
+    <span class="error">Ugh! Please enter a valid location in United Kingdom</span>
+    <button class="button"><a href="./index.html">RETURN TO HOME</a></button>
+    </div>
+    <script src="error.js"></script>
 </body>
 </html>
