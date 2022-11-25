@@ -172,19 +172,30 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
     left: 0;
     right: 0;
     margin:  0 auto;
-    width: 500px;
+    margin-top: 30px;
+    width: 400px;
     height: 50px;
     background-color: #5D6675;
     cursor: pointer;
     font-size: large;
 }
-.button:hover
-{
-    background-color: #151E1D;
+.button a{
+	background-color: none;
+    border: 3px solid #151E1D;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+    transition: .3s ease-in-out;
+}
+.button a:hover{
+	background-color: #151E1D;
     border: 3px solid #A9C3D2;
     transition: .3s ease-in-out;
 	color:#fff;
 }
+
 
 /* Responsiveness  NAVIGATION START */
 @media screen and (max-width:960px)
@@ -270,8 +281,7 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
     background-position: center;
     margin: 0;
     }
-    .error
-{
+    .error{
     font-size: 24px;
     width: 200px;
     margin: 0 auto;
@@ -280,8 +290,10 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
     position: absolute;
     top: 350px;
     width: 200px;
-    border: 2px solid #151E1D;
 }
-  
+.button a{
+    font-size: 10px;
+    width: 200px;
+}
 }
 /* Responsiveness NAVIGATION  END */

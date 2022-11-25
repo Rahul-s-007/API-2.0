@@ -8,8 +8,6 @@ fetch("gb.json")
 function work(data)
 {
     
-
-
 const inputE1 = document.querySelector("#autocomplete-input");
 inputE1.addEventListener("input",onInputChange);
 let cityName = [];

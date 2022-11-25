@@ -1,27 +1,22 @@
-// import data from './crime_incidents.json' assert{type:'json'};
-// import stats from './crime_report.json' assert{type:'json'};
-// import name from './city_name.json' assert{type:'json'};
+getLoc();
 
-fetch("crime_report.json")
-.then(cr => cr.json())
-.then(crData => work1(crData));
-
-function work1(crData)
+async function getLoc()
 {
-
-
-let latitude = [];
-let longitude = [];
-
-latitude = crData.map((lat) =>
-{
-    return lat.location.latitude;
-});
-
-longitude = crData.map((long) =>
-{
-    return long.location.longitude;
-});
+    const response = await fetch('./birm.json');
+    const data = await response.json();
+    
+    let latitude = [];
+    let longitude = [];
+    
+    latitude = data.map((lat) =>
+    {
+        return lat.location.latitude;
+    });
+    
+    longitude = data.map((long) =>
+    {
+        return long.location.longitude;
+    });
 
 var map, pointArray, heatMap;
 var latLong = [];
@@ -35,6 +30,7 @@ function addCoordinates()
 }
 addCoordinates();
 
+initialize()
 function initialize(){
     var mapOptions = {
         zoom:6,
@@ -50,24 +46,7 @@ function initialize(){
         data:pointArray
     });
     heatMap.setMap(map);
+    console.log(latLong[0])
 }
 google.maps.event.addDomListener(window,'load',initialize);
-
-var nums = document.getElementById("list");
-var listItem = nums.getElementsByTagName("li");
-
-
-// document.getElementById("Violent crime").innerHTML = stats['violent-crime'];
-// document.getElementById("Public order").innerHTML = stats['public-order'];
-// document.getElementById("Anti-social behaviour").innerHTML = stats['anti-social-behaviour'];
-// document.getElementById("Criminal damage arson").innerHTML = stats['criminal-damage-arson'];
-// document.getElementById("other-theft").innerHTML = stats['other-theft'];
-// document.getElementById("Vehicle crime").innerHTML = stats['vehicle-crime'];
-// document.getElementById("Shoplifting").innerHTML = stats['shoplifting'];
-// document.getElementById("Robbery").innerHTML = stats['robbery'];
-// document.getElementById("Drugs").innerHTML = stats['drugs'];
-// document.getElementById("other-crime").innerHTML = stats['other-crime'];
-
-// document.getElementById("cityName").innerHTML = name['city_name'];
-
 }
