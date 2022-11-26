@@ -170,6 +170,12 @@ nav li:nth-of-type(3) a:hover, .hero a:hover
     font-size: 30px;
     padding: 0.5em 0; 
 }
+.hero p em
+{
+    font-family: gro Ov Ed Font;
+    font-size: 19px;
+}
+
 .hero a
 {
     font-weight: 700;
