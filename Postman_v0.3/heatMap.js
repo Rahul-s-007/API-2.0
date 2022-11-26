@@ -2,7 +2,7 @@ getLoc();
 
 async function getLoc()
 {
-    const response = await fetch('./birm.json');
+    const response = await fetch('./crime_incidents.json');
     const data = await response.json();
     
     let latitude = [];
